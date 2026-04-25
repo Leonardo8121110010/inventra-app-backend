@@ -19,7 +19,11 @@ return [
 
     'allowed_methods' => ['*'],
 
-    'allowed_origins' => ['http://localhost:3000', 'http://localhost:3456'],
+    'allowed_origins' => [
+        'http://localhost:3000',
+        'http://localhost:3456',
+        env('FRONTEND_URL', 'https://inventra-app-frontend.vercel.app')
+    ],
 
     'allowed_origins_patterns' => [],
 
